@@ -56,6 +56,7 @@ final class OrderController extends AdminController
         ]);
 
         $form->handleRequest($this->request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->transactional(function (EntityManagerInterface $em) use ($model, $order): void {
                 $calcSubtotal = function (Operand $recipient, Money $money) use ($em) {

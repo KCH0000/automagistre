@@ -7,6 +7,7 @@ services:
             args:
                SOURCE_DIR: ./var/null
         hostname: automagistre.local
+        image: automagistre/automagistre:dev
         labels:
             subdomains: sto
         volumes:
